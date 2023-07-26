@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+
+<body class="fonts-[Roboto] bg-gradient-to-t from-[#ff7fff] to-[#c184ff] h-screen">
+ <header class="bg-white">
+    <nav class="flex justify-between items-center w-[92%] py-0 mx-auto">
+        <div>
+            <img class="w-16" src="https://cdn-icons-png.flaticon.com/512/5968/5968204.png" alt="...">
+        </div>
+        <div
+            class="nav-links md:static absolute bg-white md:min-h-fit min-h-[40vh] left-0 top-[-100%] md:w-auto w-full items-center px-5">
+            <ul class="flex md:flex-row flex-col items-center gap-[9vw] gap-5">
+            <li>
+                <a class="hover:text-gray-500" href="#">Home</a>
+            </li>
+            <li>
+                <a class="hover:text-gray-500" href="#">About & Contact</a>
+            </li>
+            <li>
+                <a class="hover:text-gray-500" href="#">Menu</a>
+            </li>
+            <div>
+                <button class="bg-[#8000ff] text-white px-6 py-2 rounded-full hover:bg-[#87acec]">Sign in</button>
+            </div>
+           </ul>
+        </div>
+        <div class="flex items-center gap-6">
+            <ion-icon onclick="ontoggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+        </div>
+    </nav>
+ </header>
+
+
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function ontoggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[6.5%]')
+        }
+    </script>
+</body>
+
+</html>
